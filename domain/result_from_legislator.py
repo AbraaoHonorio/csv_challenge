@@ -15,3 +15,10 @@ class ResultFromLegislator:
 
     def __repr__(self):
         return f"ResultFromLegislator({self.legislator.id!r}, {self.legislator.name!r}, {self.count_yes!r}, {self.count_no!r})"
+
+    def increment_votes(self, is_yes: bool):
+        if is_yes:
+            self.increment_yes()
+            return
+
+        self.increment_no()
