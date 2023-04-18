@@ -5,11 +5,8 @@ class VoteResult:
         self.vote_id = int(vote_id)
         self.vote_type = int(vote_type)
 
-    def is_yes(self):
+    def is_yes(self) -> bool:
         return self.vote_type == 1
 
-    def is_no(self):
+    def is_no(self) -> bool:
         return self.vote_type == 2
-
-    def __repr__(self):
-        return f"VoteResults({self.id!r}, {self.legislator_id!r}, {self.vote_id!r}, , {self.vote_type!r})"
